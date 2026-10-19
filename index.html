@@ -12,9 +12,10 @@
   h1 { font-size:1.4rem; text-align:center; color:var(--biru); }
   .sub { text-align:center; color:#6b7280; font-size:.9rem; margin:6px 0 20px; }
   label { display:block; font-weight:600; margin-bottom:8px; }
-  .baris-input { display:flex; gap:8px; align-items:flex-end; }
-  .kolom-input { flex:1; display:flex; flex-direction:column; }
+  .baris-input { display:grid; grid-template-columns:2fr 1fr; gap:8px; align-items:end; }
+  .kolom-input { display:flex; flex-direction:column; min-width:0; }
   .kolom-input label { text-align:center; }
+  #btn-cari { width:100%; white-space:nowrap; }
   input#nis { flex:1; padding:12px 14px; font-size:1.1rem; border:2px solid #d1d5db; border-radius:10px; outline:none; }
   input#nis:focus { border-color:var(--biru); }
   button { cursor:pointer; border:none; border-radius:10px; font-weight:600; }
