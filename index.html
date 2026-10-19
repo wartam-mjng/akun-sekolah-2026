@@ -12,7 +12,9 @@
   h1 { font-size:1.4rem; text-align:center; color:var(--biru); }
   .sub { text-align:center; color:#6b7280; font-size:.9rem; margin:6px 0 20px; }
   label { display:block; font-weight:600; margin-bottom:8px; }
-  .baris-input { display:flex; gap:8px; }
+  .baris-input { display:flex; gap:8px; align-items:flex-end; }
+  .kolom-input { flex:1; display:flex; flex-direction:column; }
+  .kolom-input label { text-align:center; }
   input#nis { flex:1; padding:12px 14px; font-size:1.1rem; border:2px solid #d1d5db; border-radius:10px; outline:none; }
   input#nis:focus { border-color:var(--biru); }
   button { cursor:pointer; border:none; border-radius:10px; font-weight:600; }
@@ -49,9 +51,11 @@
 <div class="kartu-utama">
   <h1>Cek Akun</h1>
   <p class="sub">Akun berekstensi @smpn04majenang.sch.id</p>
-  <label for="nis" style="text-align:center;">Masukkan NIS</label>
   <div class="baris-input">
-    <input id="nis" type="text" inputmode="numeric" autocomplete="off" placeholder="Contoh: 1234">
+    <div class="kolom-input">
+      <label for="nis">Masukkan NIS</label>
+      <input id="nis" type="text" inputmode="numeric" autocomplete="off" placeholder="Contoh: 1234">
+    </div>
     <button id="btn-cari">Tampilkan</button>
   </div>
   <div class="error" id="error">NIS tidak ditemukan. Periksa kembali NIS yang dimasukkan.</div>
